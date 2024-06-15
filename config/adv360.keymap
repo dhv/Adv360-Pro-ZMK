@@ -31,25 +31,16 @@
         };
     };
 
-    macros {
-        hyper: hyper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI &kp LSHIFT &kp LALT &kp LCTRL>;
-            label = "HYPER";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                          &mo 2            &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                           &kp PAUSE_BREAK  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none             &kp LCTRL  &kp LALT      &kp RALT  &kp RCTRL  &kp SCROLLLOCK   &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &mo 1         &mo 1                                 &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_COMMAND  &kp BSPC   &hyper        &hyper    &kp ENTER  &kp SPACE                &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 1
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                  &mo 2            &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                                   &kp PAUSE_BREAK  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none             &kp LCTRL  &kp LALT                  &kp RALT              &kp RCTRL  &kp SCROLLLOCK   &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &mo 1                     &mo 1                                             &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_COMMAND  &kp BSPC   &kp LS(LA(LC(LGUI)))      &kp LS(LA(LC(LGUI)))  &kp ENTER  &kp SPACE                &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
